@@ -1,10 +1,9 @@
-def read_data():
-    with open('gieldaLiczby.txt') as file:
-        return list(map(lambda x: x.split('.'), file))
+from decision_tree import DecisionTree
 
 
 def main():
-    print(read_data())
+    dt = DecisionTree('gielda.txt')
+    print(dt.chose_best_attribute())
 
 
 if __name__ == '__main__':
